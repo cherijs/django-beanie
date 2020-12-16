@@ -1,5 +1,5 @@
 *.py[co]
-*.egg*
+#*.egg*
 *.swp
 *~
 *.log
