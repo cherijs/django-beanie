@@ -37,5 +37,5 @@ Build Status
 
 Django Beanie uses Travis CI to perform tests on different Django and Python versions.
 
-Tested using Python: 2.7-3.8 and PyPy. Django: 1.9+ and Django Beanie v0.0.1 alpha:
+Tested using Python: 2.7-3.8 and PyPy. Django: 3.1+ and Django Beanie v0.0.1 alpha:
 
