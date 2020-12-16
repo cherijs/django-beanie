@@ -18,7 +18,7 @@ License
 Docs & Support
 ==============
 
-* Documentation v2: http://django-beanie.readthedocs.org/en/
+* Documentation: http://django-beanie.readthedocs.org/en/
 * Support: http://pixels.lv/support/
 
 Changelog
