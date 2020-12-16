@@ -1,0 +1,41 @@
+{
+  "name": "django_tailwind",
+  "description": "",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "npm run build:clean && npm run build:sass && npm run build:postcss && npm run build:cleancss",
+    "build:clean": "rimraf ../static/css",
+    "build:sass": "node-sass --output-style compressed src/styles.scss ../static/css/styles.css",
+    "build:postcss": "postcss --config . --map false --output ../static/css/styles.css ../static/css/styles.css",
+    "build:cleancss": "cleancss -o ../static/css/styles.css ../static/css/styles.css",
+    "dev": "watch 'npm run dev:sass && npm run dev:postcss' ./src",
+    "dev:sass": "node-sass --output-style expanded --source-map true src/styles.scss ../static/css/styles.css",
+    "dev:postcss": "postcss --config . --map true --output ../static/css/styles.css ../static/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "autoprefixer": "^10.0.2",
+    "clean-css-cli": "^4.3.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.1.9",
+    "postcss-at-rules-variables": "^0.2.1",
+    "postcss-cli": "^8.3.0",
+    "postcss-comment": "^2.0.0",
+    "postcss-css-variables": "^0.17.0",
+    "postcss-custom-properties": "^10.0.0",
+    "postcss-each": "^0.10.0",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-import": "^13.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-scss": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "tailwind-css-variables": "^2.0.3",
+    "tailwindcss": "^2.0.1",
+    "watch": "^1.0.2"
+  }
+}

@@ -1,0 +1,13 @@
+*.py[co]
+*.egg*
+*.swp
+*~
+*.log
+.idea
+.venv
+docs/_build/
+/build
+/dist/
+/node_modules/
+/env/
+.DS_Store

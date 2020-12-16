@@ -1,0 +1,4 @@
+<p class="datetime">
+  <span>{{ date_label }}</span> {% with widget=widget.subwidgets.0 %}{% include widget.template_name %}{% endwith %}<br>
+  <span>{{ time_label }}</span> {% with widget=widget.subwidgets.1 %}{% include widget.template_name %}{% endwith %}
+</p>

@@ -1,0 +1,26 @@
+{% load i18n beanie_menu %}
+{% get_menu request as menu %}
+
+{% if menu %}
+  {% for parent_item in menu %}
+  {% endfor %}
+{% endif %}
+
+{% if menu and menu.active_parent_item and menu.active_parent_item.children %}
+    <nav class="bg-primary-400 border-b border-gray-100">
+        <div class="w-full px-4 py-4 ">
+            <div class="flex items-center justify-between ">
+                <div class="flex items-center">
+                    <div class="hidden md:block">
+                        <div class="flex items-baseline space-x-4">
+                            {% for child_item in menu.active_parent_item.children %}
+                                <a href="{{ child_item.url }}" class="{{ child_item.is_active|yesno:' text-white,text-primary-200' }} hover:text-primary-100 text-sm"
+                                        {{ child_item.target_blank|yesno:' target=_blank,' }}>{{ child_item.label }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+{% endif %}

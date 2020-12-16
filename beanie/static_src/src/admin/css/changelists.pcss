@@ -1,0 +1,352 @@
+/* CHANGELISTS */
+
+#changelist {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#changelist .changelist-form-container {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#changelist table {
+  width: 100%;
+}
+
+.change-list .hiddenfields {
+  display: none;
+}
+
+.change-list .filtered table {
+  border-right: none;
+}
+
+.change-list .filtered {
+  min-height: 400px;
+}
+
+.change-list .filtered .results,
+.change-list .filtered .paginator,
+.filtered #toolbar,
+.filtered div.xfull {
+  width: auto;
+}
+
+.change-list .filtered table tbody th {
+  padding-right: 1em;
+}
+
+#changelist-form .results {
+  overflow-x: auto;
+  width: 100%;
+  max-width: calc(100vw - 32px);
+}
+
+#changelist .toplinks {
+  border-bottom: 1px solid #ddd;
+}
+
+#changelist .paginator {
+  color: #666;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* CHANGELIST TABLES */
+
+#changelist table thead th {
+
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+#changelist table thead th.action-checkbox-column {
+  width: 1.5em;
+  text-align: center;
+}
+
+#changelist table tbody td.action-checkbox {
+  text-align: center;
+}
+
+#changelist table tfoot {
+  color: #666;
+}
+
+/* TOOLBAR */
+
+#toolbar {
+  @apply p-3 bg-gray-100 rounded;
+}
+
+#toolbar form input {
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 5px;
+  color: #333;
+}
+
+#toolbar #searchbar {
+  @apply px-3 py-1 border-gray-200 hover:border-gray-300 focus:ring-0;
+}
+
+#toolbar form input[type="submit"] {
+  cursor: pointer;
+  @apply text-white px-4 font-serif pt-2 focus:ring-0 outline-none focus:outline-none ring-0;
+}
+
+#toolbar form input[type="submit"]:focus,
+#toolbar form input[type="submit"]:hover {
+}
+
+#changelist-search > div {
+  @apply flex items-center space-x-2;
+}
+#changelist-search img {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* FILTER COLUMN */
+
+#changelist-filter {
+  @apply rounded bg-gray-100;
+  order: 1;
+  width: 240px;
+
+  border-left: none;
+  margin: 0 0 0 30px;
+}
+
+#changelist-filter h2 {
+
+
+  margin-bottom: 12px;
+  border-bottom: none;
+  padding: 10px 10px 8px;
+  line-height: 1;
+  text-transform: uppercase;
+  @apply bg-headers text-white font-serif;
+}
+
+#changelist-filter h3 {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+#changelist-filter ul {
+  margin: 5px 0;
+  padding: 0 15px 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#changelist-filter ul:last-child {
+  border-bottom: none;
+}
+
+#changelist-filter li {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#changelist-filter a {
+  display: block;
+  color: #999;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+#changelist-filter li.selected {
+  border-left: 5px solid #eaeaea;
+  padding-left: 10px;
+  margin-left: -15px;
+}
+
+
+#changelist-filter li.selected a {
+  color: #5F83B6;
+}
+
+#changelist-filter a:focus,
+#changelist-filter a:hover,
+#changelist-filter li.selected a:focus,
+#changelist-filter li.selected a:hover {
+  color: #036;
+}
+
+#changelist-filter #changelist-filter-clear a {
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* DATE DRILLDOWN */
+
+.change-list ul.toplinks {
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.change-list ul.toplinks li {
+ @apply inline-block px-2 py-2;
+
+  list-style-type: none;
+
+}
+
+.change-list ul.toplinks .date-back a {
+  @apply text-gray-700  inline-block ;
+}
+
+.change-list ul.toplinks .date-back a:focus,
+.change-list ul.toplinks .date-back a:hover {
+  @apply text-primary-500;
+}
+
+/* PAGINATOR */
+
+.paginator {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 22px;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.paginator a:link,
+.paginator a:visited {
+  padding: 2px 6px;
+  @apply bg-headers text-white rounded;
+  text-decoration: none;
+
+}
+
+.paginator a.showall {
+  border: none;
+  background: none;
+  color: #5b80b2;
+}
+
+.paginator a.showall:focus,
+.paginator a.showall:hover {
+  background: none;
+  color: #036;
+}
+
+.paginator .end {
+  margin-right: 6px;
+}
+
+.paginator .this-page {
+  padding: 2px 6px;
+  font-weight: bold;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.paginator a:focus,
+.paginator a:hover {
+  color: white;
+  background: #036;
+}
+
+/* ACTIONS */
+
+.filtered .actions {
+  border-right: none;
+}
+
+#changelist table input {
+  margin: 0;
+  vertical-align: baseline;
+}
+#changelist table input[type="checkbox"]{
+  @apply border-gray-200 rounded text-primary-500 focus:ring-0 ring-offset-0 focus:shadow-none;
+}
+
+#changelist table tbody tr.selected {
+  @apply bg-gray-300 border-gray-200;
+}
+
+#changelist .actions {
+ @apply py-2 w-full border-none text-gray-600 leading-7;
+
+}
+
+
+#changelist .actions.selected {
+
+  @apply bg-gray-300 border-b border-t border-gray-300;
+}
+
+#changelist .actions span.all,
+#changelist .actions span.action-counter,
+#changelist .actions span.clear,
+#changelist .actions span.question {
+  font-size: 13px;
+  margin: 0 0.5em;
+  display: none;
+}
+
+#changelist .actions:last-child {
+  border-bottom: none;
+}
+
+#changelist .actions select {
+  vertical-align: top;
+
+  @apply py-1.5  text-xs text-gray-800 border-gray-200 rounded focus:ring-0 ring-offset-0 focus:shadow-none;
+/*  height: 24px;
+  background: none;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0 0 0 4px;
+  margin: 0 0 0 10px;*/
+
+
+}
+
+#changelist .actions select:focus {
+
+}
+
+#changelist .actions label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+#changelist .actions .button {
+  cursor: pointer;
+  @apply text-sm text-white px-2 pb-1 font-serif pt-1.5 focus:ring-0 outline-none focus:outline-none ring-0;
+
+  /*font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 -15px 20px -10px rgba(0, 0, 0, 0.15) inset;
+  cursor: pointer;
+  height: 24px;
+  line-height: 1;
+  padding: 4px 8px;
+  margin: 0;
+  color: #333;*/
+}
+
+#changelist .actions .button:focus,
+#changelist .actions .button:hover {
+  border-color: #999;
+}

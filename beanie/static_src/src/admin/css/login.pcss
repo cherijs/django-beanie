@@ -1,0 +1,85 @@
+/* LOGIN FORM */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,700&display=fallback");
+
+@layer base {
+  html,
+  body {
+    @apply font-serif ;
+  }
+}
+
+
+
+@layer components {
+  .login {
+    @apply bg-primary h-screen flex items-center justify-center;
+  }
+  .login #container {
+    @apply bg-white rounded-lg m-auto overflow-hidden shadow;
+    width: 28em;
+    min-width: 300px;
+    height: auto;
+  }
+
+  #beanie-header{
+
+  }
+
+  .login #header {
+    @apply font-serif flex items-center justify-center p-5 bg-primary-400;
+  }
+  .login #branding {
+    float: unset;
+  }
+  .clear{
+    display:none;
+  }
+
+  .login #header h1 {
+    @apply text-2xl m-0 p-0 leading-none mt-1 antialiased;
+  }
+
+  .login #header h1 a {
+    @apply text-white;
+  }
+
+  .login #content {
+    @apply px-6 pt-4 pb-6;
+  }
+  .login #footer {
+    @apply p-0;
+  }
+  .login #content-main {
+    @apply w-full;
+  }
+
+  .login .form-row {
+    @apply py-1 border-none w-full float-none;
+  }
+
+
+  .login .form-row label {
+    @apply leading-tight pb-1 block;
+  }
+
+  .login .form-row #id_username,
+  .login .form-row #id_password {
+    @apply w-full bg-gray-100 border-gray-200 rounded border-gray-100 focus:outline-none focus:ring-0 focus:bg-white focus:border-gray-300;
+  }
+
+  .login span.help {
+    @apply block text-sm;
+  }
+
+  .login .submit-row {
+    @apply flex items-center justify-center mt-3 mb-0;
+  }
+
+  .login .submit-row input {
+    @apply w-full block uppercase text-xs leading-none py-5;
+  }
+
+  .login .password-reset-link {
+    @apply text-center;
+  }
+}

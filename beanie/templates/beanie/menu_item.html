@@ -1,0 +1,22 @@
+{% load i18n %}
+<a href="{{ parent_item.url }}" {{ parent_item.target_blank|yesno:' target=_blank,' }} class="{{ parent_item.is_active|yesno:'bg-primary-400 hover:bg-primary-300,hover:bg-primary-600' }} text-white  hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium ">
+  {% trans parent_item.label|capfirst %}
+</a>
+{##}
+{#<li class="{{ parent_item.is_active|yesno:' active,' }}{{ parent_item.children|yesno:' has-children,' }}">#}
+{#    <a href="{{ parent_item.url }}"#}
+{#            {{ parent_item.target_blank|yesno:' target=_blank,' }}>{% trans parent_item.label|capfirst %}#}
+{#    </a>#}
+{#    {% if parent_item.children %}#}
+{#        {% if not parent_item.is_active  %}#}
+{#            <ul class="sub-nav">#}
+{#                {% for child_item in parent_item.children %}#}
+{#                    <li{{ child_item.is_active|yesno:' class=active,' }}>#}
+{#                        <a href="{{ child_item.url }}"#}
+{#                                {{ child_item.target_blank|yesno:' target=_blank,' }}>{{ child_item.label }}</a>#}
+{#                    </li>#}
+{#                {% endfor %}#}
+{#            </ul>#}
+{#        {% endif %}#}
+{#    {% endif %}#}
+{#</li>#}

@@ -1,0 +1,19 @@
+language: python
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+  - pypy
+env:
+  - DJANGO=3.14
+install:
+  - pip install -e .
+  - pip install -q Django==$DJANGO
+script:
+  - DJANGO_SETTINGS_MODULE=beanie.tests.settings django-admin test beanie
+matrix:
+  exclude:
+    - python: 2.7
+      env: DJANGO=2.0
+    - python: pypy
+      env: DJANGO=2.0

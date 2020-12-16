@@ -1,0 +1,47 @@
+@import "tailwind";
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,700&display=fallback");
+
+  html,
+  body {
+    @apply font-sans;
+  }
+
+  /*
+	@font-face {
+	  font-family: Proxima Nova;
+	  font-weight: 400;
+	  src: url(/fonts/proxima-nova/400-regular.woff) format("woff");
+	}
+	h1 {
+	  @apply text-2xl;
+	}
+	h2 {
+	  @apply text-xl;
+	}
+	*/
+}
+
+/*https://tailwindcss.com/docs/extracting-components*/
+@layer components {
+  .btn {
+    @apply px-4 py-2 bg-background text-white rounded;
+  }
+}
+
+/* https://tailwindcss.com/docs/adding-new-utilities */
+@layer utilities {
+  @variants responsive {
+    /* .scroll-snap-none {
+      scroll-snap-type: none;
+    }
+    .scroll-snap-x {
+      scroll-snap-type: x;
+    }
+    .scroll-snap-y {
+      scroll-snap-type: y;
+    }*/
+  }
+}
