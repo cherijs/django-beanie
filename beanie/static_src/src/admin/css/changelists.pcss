@@ -68,6 +68,14 @@
   text-align: center;
 }
 
+
+#changelist table thead th .text {
+  @apply text-xs font-sans;
+}
+#changelist table thead th .text a , #changelist table thead th .text > span {
+@apply p-2;
+}
+
 #changelist table tbody td.action-checkbox {
   text-align: center;
 }
@@ -272,7 +280,7 @@
   vertical-align: baseline;
 }
 #changelist table input[type="checkbox"]{
-  @apply border-gray-200 rounded text-primary-500 focus:ring-0 ring-offset-0 focus:shadow-none;
+  @apply border-gray-200 rounded text-gray-500 focus:ring-0 ring-offset-0 focus:shadow-none shadow-none;
 }
 
 #changelist table tbody tr.selected {
