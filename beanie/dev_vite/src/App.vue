@@ -1,10 +1,10 @@
 <template>
-  <div>heee</div>
   <slot></slot>
 </template>
+
 <script>
 export default {
-  name: "Settingsmenu",
+  name: "App",
+  components: {},
 };
 </script>
-<style scoped></style>

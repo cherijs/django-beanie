@@ -1,14 +1,7 @@
-// const path = require("path");
-//
-// const sharedConfig = {
-//   alias: {
-//     "/@/": path.resolve(__dirname, "src"),
-//   },
-// };
-// module.exports = {
-//   ...sharedConfig,
-//   transforms: [require("vite-transform-globby-import")(sharedConfig)],
-// };
+const path = require("path");
+const rimraf = require("rimraf");
+
+rimraf.sync(path.resolve(__dirname, "../static/beanie"));
 
 const pathAliasMap = {
   "@/": "/src/",
@@ -19,6 +12,10 @@ const pathAliasMap = {
 export default {
   cors: true,
   emitManifest: true,
+  outDir: "../static/beanie",
+  alias: {
+    vue: "vue/dist/vue.esm-bundler.js",
+  },
   resolvers: [
     {
       alias(path) {

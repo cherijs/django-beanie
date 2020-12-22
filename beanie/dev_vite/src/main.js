@@ -1,17 +1,14 @@
 import { createApp, h } from "vue";
 import App from "./App.vue";
-import Settingsmenu from "./components/global/Settingsmenu.vue";
+import Profiledropdown from "@components/global/Profiledropdown.vue";
+
 import "./a.tailwind.css";
 import "./index.css";
 // Create a Vue application
-// const app = createApp({
-//   render() {
-//     return h("pre", {}, "heel");
-//   },
-// });
-const app = createApp(App);
-
-app.mount("#beanie-header");
+const app = createApp({});
+// const app = createApp({});
+app.component("Profiledropdown", Profiledropdown);
+app.mount("#profile_dropdown");
 
 // import files from "./components/global/*.@(vue)";
 // const files = require.context("./components/global", true, /\.vue$/i);
@@ -21,6 +18,8 @@ app.mount("#beanie-header");
 //     `%c ${component} `,
 //     "background: blue; color: white; border-radius:2px;"
 //   );
+// Vue.component("ExampleComponent", () => import("./components/ExampleComponent"));
+
 //   // return Vue.component(component, files(key).default);
 // });
 // app.mount("body > div");

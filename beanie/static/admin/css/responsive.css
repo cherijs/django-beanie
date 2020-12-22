@@ -69,19 +69,19 @@ button {
   }
 
   #content-related {
-    margin-right: -290px;
+    //margin-right: -290px;
   }
 
   .colSM #content-related {
-    margin-left: -290px;
+    //margin-left: -290px;
   }
 
   .colMS {
-    margin-right: 290px;
+    //margin-right: 290px;
   }
 
   .colSM {
-    margin-left: 290px;
+    //margin-left: 290px;
   }
 
   .dashboard .module table td a {
