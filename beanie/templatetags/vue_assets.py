@@ -41,16 +41,11 @@ def get_manifest(context, request):
     )
 
     static_assets = {}
-    print(manifest)
-    print(path.exists(manifest))
+
     if path.exists(manifest):
         with open(manifest) as json_file:
             assets = json.load(json_file)
-            # print(assets['index.js'])
-            # print(assets['style.css'])
-
             for k, asset in assets.items():
-                print(k)
                 static_assets.update({
                     k:static(f"beanie/_assets/{asset}")
                 })
