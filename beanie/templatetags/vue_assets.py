@@ -28,8 +28,8 @@ def get_manifest(context, request):
     if not isinstance(request, HttpRequest):
         return None
 
-    if 'runserver' in sys.argv:
-        print(context['debug'])
+    # if 'runserver' in sys.argv:
+    #     print(context['debug'])
 
 
     manifest = os.path.join(
